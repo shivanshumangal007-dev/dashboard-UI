@@ -220,7 +220,6 @@ nav.top_navbar {
   left: -10%;
 }
 
-
 /* right_most_content */
 
 .content_box_right {
@@ -232,55 +231,146 @@ nav.top_navbar {
   height: 90vh;
 }
 
-.content_box_right .section1{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.content_box_right .section1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.section1 .profiles, .section1 .options{
+.section1 .profiles,
+.section1 .options {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.section1 .add_profile {
+  height: 2.5vw;
+  width: 2.5vw;
+  border-radius: 60px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px var(--font-light-black);
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+.section1 .logo_icon,
+.section1 .options i {
+  height: 2vw;
+  border: solid 1px var(--font-light-black);
+  width: 2vw;
+  border-radius: 60px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.section1 .profiles .profile {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+  border: solid 1px var(--font-light-black);
+  padding: 0.2vw 0.3vw;
+  text-transform: capitalize;
+  font-size: var(--font-size-sm);
+  background-color: var(--white);
+  border-radius: 60px;
+}
+.section1 .profiles img {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 60px;
+}
+
+/* main content box section2 */
+.content_box_right .section2 {
+  margin-top: 1vw;
+  width: 100%;
+  padding: 0.4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section2 .report_name input {
+    background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  padding: 0 1vw;
+  font-size: 3vw;
+}
+
+.section2 .report_name input:focus {
+  outline: none;
+}
+
+.section2 .timeframe{
     display: flex;
     align-items: center;
     gap: 1vw;
+    padding: 1vw;
 }
-.section1 .add_profile{
-    height: 2.5vw;
-    width: 2.5vw;
+.section2 .timeframe .date{
+    background-color: var(--black-bg-shade);
     border-radius: 60px;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px var(--font-light-black);
-    font-size: 1.5vw;
-    cursor: pointer;
+    padding: 0.5vw 1vw;
 }
-.section1 .logo_icon, .section1 .options i{
-    height: 2vw;
-    border: solid 1px var(--font-light-black);
-    width: 2vw;
-    border-radius: 60px;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1vw;
-    cursor: pointer;
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
 }
-.section1 .profiles .profile{
-    display: flex;
-    align-items: center;
-    gap: 0.3vw;
-    border: solid 1px var(--font-light-black);
-    padding: 0.2vw 0.3vw;
-    text-transform: capitalize;
-    font-size: var(--font-size-sm);
-    background-color: var(--white);
-    border-radius: 60px;
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.section1 .profiles img{
-    height: 2vw;
-    width: 2vw;
-    border-radius: 60px;
+
+/* Slider Track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 2vw;
+  transition: 0.4s;
+
+  /* Track size */
+  width: 3.2vw; /* adjust as you like */
+  height: 1.6vw; /* slightly bigger than knob */
+}
+
+/* Knob */
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 1vw;
+  height: 1vw;
+  left: 0.3vw;
+  top: 0.3vw;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Checked Track */
+input:checked + .slider {
+  background-color: #282828;
+}
+
+/* Focus Ring */
+input:focus + .slider {
+  box-shadow: 0 0 0.2vw #282828;
+}
+
+/* Knob Translate Distance */
+input:checked + .slider:before {
+  transform: translateX(1.6vw);
 }
