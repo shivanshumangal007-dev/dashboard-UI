@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Golos Text", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+:root {
+  --main-bg-color: #f4f1f1;
+  --white-bg-color: #fbfbfb;
+  --white: #fff;
+  --secondary-bg-color: #d72f59;
+  --black-bg-shade: #f0f0f0;
+  --font-light-black: #c6c6c6;
+  --font-size-sm: 1vw;
+}
+#main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+}
+/* top bar */
+nav.top_navbar {
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  padding: 0 1vw;
+  padding-top: 1vw;
+}
+.top_navbar .logo {
+  height: 100%;
+}
+.top_navbar .logo img {
+  height: 100%;
+}
+
+.top_navbar .logo_name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.top_navbar .search_box {
+  width: 100%;
+  padding-left: 3vw;
+  position: relative;
+}
+.top_navbar .search_box i {
+  position: absolute;
+  top: 19%;
+  left: 5%;
+  font-size: 1.8vw;
+  color: var(--font-light-black);
+}
+.top_navbar .search_box input {
+  width: 40%;
+  height: 3vw;
+  border: none;
+  border-radius: 60px;
+  padding: 0 1vw;
+  font-size: 1vw;
+  background-color: var(--white);
+  padding-left: 3vw;
+}
+
+.top_navbar .profile_navbar {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.top_navbar .profile_navbar .profile {
+  height: 100%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  border-radius: 60px;
+  padding: 0.8vw;
+}
+.top_navbar .profile img {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 60px;
+}
+
+.top_navbar .profile_navbar > i {
+  color: var(--white);
+  font-size: 1.5vw;
+  padding: 0.4vw;
+  border-radius: 60px;
+  background-color: var(--secondary-bg-color);
+}
+.content_box_main {
+  display: flex;
+  gap: 3px;
+  padding-top: 0.5vw;
+}
+/* left_most_bar */
+.content_box_left1 {
+  height: 92vh;
+  padding: 2vw 0;
+  width: 4vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.content_box_left1 .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  list-style: none;
+}
+.content_box_left1 i {
+  color: black;
+  font-size: 1.7vw;
+  padding: 0.5vw;
+  border-radius: 60px;
+  background-color: var(--white);
+}
+.content_box_left1 .list i.active {
+  color: var(--white);
+  background-color: var(--secondary-bg-color);
+}
+
+.content_box_left1 .left_second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  list-style: none;
+}
+
+/* left2 */
+.content_box_left2 {
+  padding: 0.3vw;
+  width: 16vw;
+  padding-left: 2vw;
+}
+
+.content_box_left2 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+}
+
+.content_box_left2 .list h2 {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.content_box_left2 .list h2 i {
+  margin-right: 0.3vw;
+}
+
+.content_box_left2 .list h2.light {
+  color: var(--font-light-black);
+}
+
+.list1,
+.list2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  padding-left: 1vw;
+  position: relative;
+}
+.list1::before,
+.list2::before {
+  content: "";
+  width: 1px;
+  height: calc(100% - 0.5vw);
+  background-color: var(--font-light-black);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.list1 h2,
+.list2 h2 {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+}
+.list1 h2.active,
+.list2 h2.active {
+  color: var(--secondary-bg-color);
+  font-weight: 700;
+}
+.list1 h2 span,
+.list2 h2 span {
+  background-color: var(--secondary-bg-color);
+  color: var(--white);
+  display: flex;
+  padding: 5px;
+  font-size: 0.5vw;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.list1 h2::before,
+.list2 h2::before {
+  content: "";
+  width: 0.8vw;
+  height: 1px;
+  background-color: var(--font-light-black);
+  position: absolute;
+  top: 50%;
+  left: -10%;
+}
