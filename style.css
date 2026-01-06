@@ -219,3 +219,68 @@ nav.top_navbar {
   top: 50%;
   left: -10%;
 }
+
+
+/* right_most_content */
+
+.content_box_right {
+  width: calc(100vw - 20vw - 2vw - 3px);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5vw;
+  background-color: var(--white-bg-color);
+  height: 90vh;
+}
+
+.content_box_right .section1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section1 .profiles, .section1 .options{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.section1 .add_profile{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 60px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--font-light-black);
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.section1 .logo_icon, .section1 .options i{
+    height: 2vw;
+    border: solid 1px var(--font-light-black);
+    width: 2vw;
+    border-radius: 60px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.section1 .profiles .profile{
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+    border: solid 1px var(--font-light-black);
+    padding: 0.2vw 0.3vw;
+    text-transform: capitalize;
+    font-size: var(--font-size-sm);
+    background-color: var(--white);
+    border-radius: 60px;
+}
+.section1 .profiles img{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 60px;
+}
