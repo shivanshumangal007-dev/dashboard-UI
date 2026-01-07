@@ -19,7 +19,9 @@ body {
   --secondary-bg-color: #d72f59;
   --black-bg-shade: #f0f0f0;
   --font-light-black: #c6c6c6;
+  --black-font-color: #282828;
   --font-size-sm: 1vw;
+
 }
 #main {
   width: 100%;
@@ -362,15 +364,180 @@ nav.top_navbar {
 
 /* Checked Track */
 input:checked + .slider {
-  background-color: #282828;
+  background-color: var(--black-font-color);
 }
 
 /* Focus Ring */
 input:focus + .slider {
-  box-shadow: 0 0 0.2vw #282828;
+  box-shadow: 0 0 0.2vw var(--black-font-color);
 }
 
 /* Knob Translate Distance */
 input:checked + .slider:before {
   transform: translateX(1.6vw);
+}
+
+
+/* section3 */
+.section3{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vw 0.5vw;
+
+  /* background-color: #0973e5; */
+}
+
+.section3 .revenue{
+  text-transform: capitalize;
+  display: flex;
+  gap: 0.3vw;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.section3 .revenue div{
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  
+}
+.section3 .revenue span{
+  padding: 0.2vw 0.5vw;
+  background-color: var(--secondary-bg-color);
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+.revenue h1{
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+.revenue h2{
+  font-size: 2vw;
+  font-weight: 700;
+}
+
+.section3 .middle{
+  display: flex;
+  align-content: center;
+  gap: 1vw;
+}
+
+.section3 .middle .card{
+    display: flex;
+  gap: 0.6vw;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 0.5vw;
+  width: 12vw;
+  border-radius: 10px;
+  border: 3px solid var(--black-bg-shade);
+
+
+}
+.section3 .middle .card:nth-child(2){
+  background-color: var(--black-font-color);
+
+}
+
+.middle .card .top{
+  display: flex;
+  justify-content: space-between;
+
+}
+.card .profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .profile .left{
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle .card h3{
+  font-size: var(--font-size-sm);
+  color:var(--font-light-black);
+  text-transform: capitalize;
+}
+.middle .card h2{
+  /* color: white; */
+  padding: 2px;
+  font-weight: 600;
+}
+.middle .card:nth-child(2) h2{
+  color: white;
+}
+.middle .card:nth-child(2) h2{
+  color: white;
+}
+
+.middle .card .profile .left{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.middle .card .profile img{
+ width: 1.5vw;
+ height: 1.5vw;
+ border-radius: 50%;
+  object-fit: cover;
+
+}
+.card .profile h4{
+  color: var(--black-font-color);
+}
+.middle .card:nth-child(2) .profile {
+  color: white;
+}
+.middle .card:nth-child(2) .profile h4{
+  color: white;
+}
+
+
+.section3 .deals{
+  display: flex;
+  align-content: center;
+  gap: 1vw;
+}
+.section3 .deals .card{
+    display: flex;
+  gap: 0.6vw;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 0.7vw;
+  width: 6.5vw;
+  border-radius: 10px;
+  align-items: center;
+  border: 3px solid var(--black-bg-shade);
+  box-shadow: 0.5px 0.5px 10px var(--black-bg-shade);
+  transition: all 0.3s ease-in;
+}
+.section3 .deals .card:hover{
+  transform: scale(1.02);
+  background-color: #FEFBFC;
+  border: 3px solid var(--secondary-bg-color);
+}
+.section3 .deals .card:hover h2{
+  background-color: var(--secondary-bg-color);
+  
+}
+.deals .card h1{
+  color: var(--black-font-color);
+  font-size: 0.8vw;
+  text-transform: capitalize;
+}
+.deals .card h2{
+  font-size: var(--font-size-sm);
+  background-color: var(--font-light-black);
+  padding: 0.4vw;
+  transition: all 0.3s ease-in;
+  border-radius: 15px;
+  color: white;
+}
+.deals .card h3{
+  color: var(--black-font-color);
+  font-size: 0.8vw;
 }
