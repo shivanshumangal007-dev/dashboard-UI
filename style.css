@@ -103,6 +103,7 @@ nav.top_navbar {
   background-color: var(--secondary-bg-color);
 }
 .content_box_main {
+  /* min-height: 100vh; */
   display: flex;
   gap: 3px;
   padding-top: 0.5vw;
@@ -230,7 +231,7 @@ nav.top_navbar {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 0.5vw;
   background-color: var(--white-bg-color);
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .content_box_right .section1 {
@@ -540,4 +541,103 @@ input:checked + .slider:before {
 .deals .card h3{
   color: var(--black-font-color);
   font-size: 0.8vw;
+}
+
+.section4{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3vw;
+  align-items: center;
+  /* background-color: var(); */
+}
+.section4 .left{
+  width: 93%;
+  display: flex;
+  gap: 0.6vw ;
+  background-color: var(--black-bg-shade);
+  border-radius: 30px;
+  padding: 0.3vw;
+}
+.section4 .left .profile{
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  padding: 0.5vw;
+  border-radius: 20px;
+}
+.section4 .left .profile img{
+  width: 1.6vw;
+  height: 1.6vw;
+  border-radius: 20px;
+}
+.section4 .left .profile h2 {
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+.section4 .left .profile h3 {
+  color: var(--font-light-black);
+  font-weight: 400;
+font-size: var(--font-size-sm);
+}
+.section4 .left .profile .id{
+  display: flex;
+  align-items: center;
+}
+.section4 .left .profile:nth-child(2){
+  width: 30%;
+}
+.section4 .left .profile:nth-child(3){
+  width: 20%;
+}
+.section4 .left .profile:nth-child(4){
+  width: 20%;
+  background-color: transparent;
+}
+
+.section4 .btn4{
+  border-radius: 30px;
+  height: 100%;
+  padding: 0.6vw 1vw;
+  text-transform: capitalize;
+  background-color: var(--black-font-color);
+  color: var(--white);
+
+}
+
+.section5{
+  width: 100%;
+  padding: 1vw;
+  height: fit-content;
+  display: flex;
+}
+.section5 .left5{
+  width: 50%;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section5 .left5 img:nth-child(1){
+  margin-bottom: 10px;
+  width: 49%;
+}
+.section5 .left5 img:nth-child(2){
+  margin-bottom: 10px;
+  width: 49%;
+}
+.section5 .left5 img:nth-child(3){
+  width: 100%;
+}
+.right5{
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right5 img{
+  height: 100%;
+  width: 100%;
 }
